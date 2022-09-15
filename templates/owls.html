@@ -1,0 +1,10 @@
+{% extends 'default.html' %} {% block title %}{{ title }}{% endblock title %} {%
+block heading %}{{ title }}{% endblock heading %} {% block content %}
+<ul>
+  {% for owl in owls %}
+  <li>
+    <a href="{{ url_for('owls_show', id=owl.id) }}"><b>{{ owl.name }}</b></a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock content %}
